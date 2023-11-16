@@ -1,0 +1,274 @@
+/* Variables */
+:root {
+    --primary-color: #079992;
+    --secondary-color: #f5f6fa;
+    --tertiary-color: #03353d;
+    /* --footer-color:  #353b48; */
+}
+
+/* Configuration */
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0;
+   font-family:'Montserrat', sans-serif;
+   color: var(--tertiary-color);
+   font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h3, h4 {
+    font-family:'Agbalumo', sans-serif;
+    color: var(--primary-color);
+}
+
+.mainContainer {
+    min-height: 100vh;
+    background-image:url('../images/navigo_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+}
+
+/* Header */
+
+header {
+    max-height: 15vh;
+    display: flex;
+    box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+}
+
+.header_navigo_logo {
+    width: 20vw;
+}
+.header_navigo_logo img {
+    width: 100%;
+    max-height: 15vh;
+    object-fit: cover;
+}
+.header_title {
+    width: 60vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_title h1 {
+    font-size: 3.5em;
+}
+
+.header_epitech_logo {
+    width: 20vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_epitech_logo img {
+    width: 70%;
+}
+
+/* Main */
+
+main {
+    min-height: 75vh;
+}
+
+.presentation_box, .video_box {
+    width: 45vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 60px auto;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.presentation_box h2, .video_box h2, .story h2 {
+    margin-bottom: 20px;
+}
+
+.video_box iframe{
+    border-radius: 10px;
+}
+
+.user_stories {
+    max-width: 80vw;
+    display: flex;
+    margin: 60px auto;
+}
+
+.story {
+    width: 33%;
+    background-color: var(--secondary-color);
+    padding: 40px;
+    border-radius: 10px;
+    margin: 0 10px;
+}
+
+.story h2 {
+    text-align: center;
+}
+
+.story_img { 
+    width: 90%;
+    height: 20vh;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+    margin: 30px auto;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.story:nth-child(1) .story_img {
+    background-image:url('../images/sebastian-herrmann-O2o1hzDA7iE-unsplash.jpg');
+}
+.story:nth-child(2) .story_img {
+    background-image:url('../images/alex-perez-R8Hco_-WcxQ-unsplash.jpg');
+}
+.story:nth-child(3) .story_img {
+    background-image:url('../images/marvin-meyer-SYTO3xs06fU-unsplash.jpg');
+}
+/* Footer */
+
+footer {
+    background-color: var(--tertiary-color);
+    min-height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+footer h3 {
+    color: white;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 991px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        max-height: none;
+    }
+
+    .header_navigo_logo, .header_title, .header_epitech_logo, .presentation_box, .video_box, .user_stories {
+        width: 95vw;
+    }
+
+    .header_title h1 {
+        font-size: 2.8em;
+    }
+    .header_navigo_logo {
+        display: flex;
+        justify-content: center;
+    }
+    .header_epitech_logo img, .header_navigo_logo img {
+        width: 80%;
+        max-height: 20vh;
+        object-fit: cover;
+    }
+
+    .video_box iframe{
+        width: 100%;
+        max-height: 30vh;
+    }
+
+    .user_stories {
+        flex-direction: column;
+    }
+    .story {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    footer {
+        padding: 20px;
+    }
+
+    
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+
+    .header_epitech_logo img, .header_navigo_logo img {
+        width: 50%;
+        /* max-height: 25vh; */
+        object-fit: fill;
+    }
+    .header_title h1 {
+        font-size: 3em;
+    }
+    .video_box iframe{
+        width: 100%;
+        max-height: 50vh;
+    }
+    .story_img { 
+        height: 30vh;
+    }
+    .video_box iframe {
+        max-height: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .header_epitech_logo, .header_navigo_logo {
+        width: 30vw;
+    }
+    .header_title {
+        width: 40vw;
+    }
+
+    .header_title h1 {
+        font-size: 2em;
+    }
+    .header_epitech_logo img, .header_navigo_logo img {
+        max-width: 100%;
+        max-height: 15vh;
+        object-fit: cover;
+    }
+    .story_img { 
+        height: 45vh;
+    }
+    
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .header_epitech_logo img, .header_navigo_logo img {
+        max-width: 75%;
+        max-height: 15vh;
+        object-fit: cover;
+    }
+    .header_title h1 {
+        font-size: 2.5em;
+    }
+    .header_navigo_logo, .header_title, .header_epitech_logo, .presentation_box, .video_box, .user_stories {
+        width: 70vw;
+    }
+    .user_stories {
+        flex-direction: column;
+    }
+    .story {
+        width: 100%;
+        margin: 20px;
+    }
+    .story_img {
+        height: 40vh;
+    }
+
+}
